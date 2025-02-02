@@ -52,4 +52,23 @@
     </pre>
         
 </body>
+    <h2>Attribute binding</h2>
+    <div x-data="{ids: [2, 5, 3]}">
+        <template x-for="id in ids">
+            <p>
+                <span x-text="`${id}: `"></span><input type="text" x-bind:name="`input_{$i}`" placeholder="">
+            </p>
+        </template>
+    </div>
+    <h3>Code</h3>
+    <pre>
+&lt;div x-data=&quot;{ids: [2, 5, 3]}&quot;&gt;
+    &lt;template x-for=&quot;id in ids&quot;&gt;
+        &lt;p&gt;
+            &lt;span x-text=&quot;`${id}: `&quot;&gt;&lt;/span&gt;&lt;input type=&quot;text&quot; x-bind:name=&quot;`input_{$i}`&quot; placeholder=&quot;&quot;&gt;
+        &lt;/p&gt;
+    &lt;/template&gt;
+&lt;/div&gt;
+</pre>
+        
 </html>
