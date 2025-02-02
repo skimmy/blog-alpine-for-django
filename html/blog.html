@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>Code for the blog post on AlipneJS</title>
+    <style>
+        body {
+            width: 66%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Blog post example code</h1>
+    <h2>Event Listener</h2>
+    <div x-data="" id="content">
+        <!-- @click is shortcut for x-on:click -->
+        <button @click="console.log('Clicked!')">Click to Log!</button>
+    </div>
+    <h3>Code</h3>
+    <pre>
+&lt;div x-data=&quot;&quot; id=&quot;content&quot;&gt;
+    &lt;!-- @click is shortcut for x-on:click --&gt;
+    &lt;button @click=&quot;console.log('Clicked!')&quot;&gt;Click to Log!&lt;/button&gt;
+&lt;/div&gt;
+    </pre>
+    <h2>Reactive variables</h2>
+    <div x-data="{count: 0}">
+        <button @click="count++">Click: </button>
+        Clicks: <strong x-text="count"></strong>
+    </div>
+    <h3>Code</h3>
+    <pre>
+&lt;div x-data=&quot;{count: 0}&quot;&gt;
+    &lt;button @click=&quot;count++&quot;&gt;Click: &lt;/button&gt;
+    Clicks: &lt;strong x-text=&quot;count&quot;&gt;&lt;/strong&gt;
+&lt;/div&gt;
+    </pre>
+    <h2>Model binding</h2>
+    <div x-data="{text: ''}">
+        <input type="text" x-model="text"><br>
+        The input text contains: <span style="color: blue" x-text="text"></span>
+    </div>
+    <h3>Code</h3>
+    <pre>
+&lt;div x-data=&quot;{text: ''}&quot;&gt;
+    &lt;input type=&quot;text&quot; x-model=&quot;text&quot;&gt;&lt;br&gt;
+    The input text contains: &lt;span style=&quot;color: blue&quot; x-text=&quot;text&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+    </pre>
+        
+</body>
+</html>
